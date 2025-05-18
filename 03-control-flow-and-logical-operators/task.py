@@ -1,27 +1,38 @@
-#control flow and logical operators
-print("welcome to the rollercoster")
-height = int(input("what is your height in cm? "))
+# Control flow and logical operators
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
 
 if height >= 120:
-    print("you can ride roleercoster? ")
-else:
-    print("sorry you have to grow taller before you can ride")
+    print("You can ride the rollercoaster!")
+    age = int(input("What is your age? "))
+    
+    if age <= 12:
+        bill = 5
+        print("Child tickets are $5.")
+    elif age <= 18:
+        bill = 7
+        print("Teen tickets are $7.")
+    else:
+        bill = 12
+        print("Adult tickets are $12.")
+    
+    wants_photo = input("Do you want a photo taken? Type 'y' for Yes and 'n' for No: ").lower()
+    if wants_photo == "y":
+        bill += 3
 
-#modulo operator
-number_to_check = int(input("what is the number you need to check "))
+    print(f"Your final bill is ${bill}.")
+else:
+    print("Sorry, you need to grow taller before you can ride.")
+
+# Modulo operator (separate logic block)
+number_to_check = int(input("What is the number you want to check? "))
 
 if number_to_check % 2 == 0:
-    print("this is even number")
-    age = int(input("what is your age "))
-    if age <= 12:
-        print("please pay 5$")
-    elif age <=18:
-        print("please pay the 7$")
-    else:
-        print("please pay the 7$")
+    print("This is an even number.")
 else:
-    print("this is and odd number")
-
-# nested if statements and elif statements
+    print("This is an odd number.")
 
 
+code challenge
+#pizza order practice
